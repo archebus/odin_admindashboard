@@ -1,0 +1,221 @@
+/* Font Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Basic Style Reset */
+
+*,
+*::before,
+*::after {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #e2e8f0;
+    font-size: 14px;
+}
+
+/* Global Styles */
+  
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Raleway", sans-serif;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+svg {
+    width: 40px;
+}
+
+/* Top Level Layout */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 250px 4fr;
+}
+
+.dashboard {
+    background-color: hsl(201, 79%, 46%);
+    grid-row: 1 / 5;
+}
+
+.header {
+    background-color: white;
+}
+
+/* Dashboard Styling */
+
+.logo {
+    display: flex;
+    margin: 20px 10px;
+}
+
+.logo > svg {
+    width: 50px;
+    padding-right: 10px;
+    fill: white;
+}
+
+.logo > h1 {
+    color: white;
+}
+
+.nav {
+    margin: 20px;
+}
+
+a > svg {
+    fill: white;
+    width: 25px;
+}
+
+.nav-top {
+    margin-top: 50px;
+}
+
+.nav-item {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    justify-items: start;
+    gap: 20px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.nav-break {
+    margin-top: 50px;
+}
+
+/* Header Styling */
+
+.header {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding: 20px 50px;
+    gap: 30px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    height: 35px;
+    width: clamp(100px, 80%, 1000px);
+    border-radius: 20px;
+    border: none;
+    margin-left: 10px;
+}
+
+.header-top-right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.header-top-right > * {
+    margin-left: 40px;
+}
+
+
+.profile-photo-med {
+    border-radius: 100%;
+    width: 50px;
+}
+
+.header-main {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+}
+
+.profile-photo-large {
+    border-radius: 100%;
+    width: 75px;
+    grid-row: 1 / 3;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.header-buttons > button {
+    background-color: hsl(201, 79%, 46%);
+    border: none;
+    margin-left: 40px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.header-buttons > button:hover {
+    background-color: hsl(201, 79%, 56%);
+    cursor: pointer;
+}
+
+/* Content Section Styling */
+
+.content {
+    padding: 20px;
+}
+
+.projects-title {
+    margin-bottom: 20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.projects-wrapper {
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 25px;
+}
+
+.project {
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    border-left: solid 10px hsl(201, 79%, 46%);
+}
+
+.project > svg {
+    width: 25px;
+    align-self: flex-end;
+}
