@@ -22,7 +22,7 @@ li {
 
 body {
     background-color: #e2e8f0;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 /* Global Styles */
@@ -156,6 +156,10 @@ a > svg {
     grid-template-columns: 100px 1fr;
 }
 
+.header-main > p {
+    align-self: end;
+}
+
 .profile-photo-large {
     border-radius: 100%;
     width: 75px;
@@ -188,34 +192,103 @@ a > svg {
 
 .content {
     padding: 20px;
+    color: grey;
 }
 
-.projects-title {
-    margin-bottom: 20px;
+.content h1,
+.content h2,
+.content h3,
+.content h4 {
+    color: black;
 }
 
 .projects {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
+    grid-template-columns: 5fr 2fr;
+    column-gap: 50px;
+    row-gap: 10px;
+}
+
+.projects-title {
+    grid-column: 1;
 }
 
 .projects-wrapper {
-    grid-row: 1 / 3;
+    grid-row: 2 / 5;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 25px;
 }
 
 .project {
+    display: grid;
+    grid-template-rows: 1fr 80% auto-fill;
     background-color: white;
-    padding: 25px;
+    padding: 25px 25px 10px 25px;
     border-radius: 20px;
     border-left: solid 10px hsl(201, 79%, 46%);
 }
 
-.project > svg {
+.projects-item-title {
+    align-self: end;
+}
+
+.button-container > svg {
     width: 25px;
-    align-self: flex-end;
+    margin: 10px 15px 0px 15px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+/* Announcements Styling */
+
+.announcements {
+    background-color: white;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+.announcements-item {
+    padding: 10px 0px;
+}
+
+hr {
+    background-color: grey;
+    border-width: 0;
+    color: grey;
+    height: 2px;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 10px 30px;
+}
+
+.trending-heading {
+    align-self: end;
+}
+
+.trending-item {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.trending-logo {
+    border-radius: 100%;
+    width: 50px;
+    grid-row: span 2;
+    margin: 10px;
+}
+
+.tagme {
+    align-self: end;
 }
